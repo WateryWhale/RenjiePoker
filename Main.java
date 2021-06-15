@@ -7,10 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+    public static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("homescreen.fxml"));
+        Main.primaryStage = primaryStage;
         primaryStage.setTitle("Rengie Poker");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
